@@ -21,6 +21,16 @@ class App extends Component {
       ],
 
       seleksi: [],
+      seleksiItem: (
+        <View>
+          <Text>Hello</Text>
+        </View>
+      ),
+      seleskiItem2: (
+        <View>
+          <Text>Hello 2</Text>
+        </View>
+      ),
     };
   }
 
@@ -39,6 +49,9 @@ class App extends Component {
           )}
           keyExtractor={item => item.nama}
         />
+        {this.state.seleksi.nama === 'citra'
+          ? this.state.seleksiItem
+          : this.state.seleskiItem2}
       </View>
     );
   }
